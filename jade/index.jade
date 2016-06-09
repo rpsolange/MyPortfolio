@@ -1,0 +1,188 @@
+doctype html
+html
+    head
+        title Milú Robles
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/animate.css")
+        link(rel="stylesheet",type="text/css", href="css/bootstrap.min.css")
+        link(rel="stylesheet",type="text/css", href="css/ionicons.min.css")
+        link(rel="icon" type="image/png" href="image/icon.png")
+        link(href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Glass+Antiqua' rel='stylesheet' type='text/css')
+        link(rel="stylesheet" href="sass/main.css")
+        link(rel="stylesheet", href="css/ihover.min.css")
+    body
+        include mixin
+
+        header
+            nav#menu.navbar.navbar-default.navbar-fixed-top.animated.fadeIn
+                div.navbar-header
+                    button.navbar-toggle(type="button" data-toggle="collapse" data-target="#navbarCollapse")
+                        span.sr-only Toggle navigation
+                        span.icon-bar
+                        span.icon-bar.line-bar
+                        span.icon-bar
+                    
+                    a.navbar-brand(href="#") 
+                        img(src="image/logo.png", alt="logo")
+
+                div#navbarCollapse.collapse.navbar-collapse
+                    ul.nav.navbar-nav.navbar-right
+                        li 
+                            a(href="#about") SOBRE MÍ
+                        li 
+                            a(href="#skill") HABILIDADES
+                        li 
+                            a(href="#proyecto") PROYECTOS
+                        li 
+                            a(href="#contact") CONTÁCTAME
+                        
+        section.hero-image
+            .marca_agua
+                .container
+                    .col-md-5.col-md-offset-7
+                        .border-white.animated.zoomIn
+                            h1
+                                img.name.animated.fadeIn(src="image/nombre.png" alt="Milú Robles")
+                            img.line.animated.bounceIn(src="image/titulo.png")
+                                
+        section.about_me#about
+            .container
+                .row
+                    .col-md-4.col-sm-12.about-title
+                        div.figure1
+                            div.figure2
+                                div.figure3
+                        hr.line(width="95%")
+                        h2 Sobre Mí
+                        hr(width="20%", align="left")
+                    .col-md-8.col-sm-12.about-text
+                        h4 Soy Milú Robles Prudencio, Desarrolladora Web Front-End Junior.
+                        p Me inicié en este mundo tecnológico gracias a Laboratoria, y a mis ganas de aprender, de seguir estudiando y desarrollarme profesionalmente. Aquí he podido desarrollar mis habilidades técnicas y personales, hacer uso de mi creatividad y ser autodidacta.
+                        p Soy responsable y muy hábil, me gusta trabajar en equipo, debido a que cada miembro es capaz de añadir ideas nuevas y así podemos aprender unos de otros, y finalmente juntos lograr los objetivos y/o metas planteadas.
+                        p Algunos de mis intereses:
+                        .row.text-center
+                            +icon("Me encanta escuchar música al codear")(class="ion-headphone")
+                            +icon("Codear es mi nueva pasión")(class="ion-code")
+                            +icon("Me gusta compartir conocimientos")(class="ion-ios-lightbulb")
+                            +icon("Me gusta estar en constante aprendizaje")(class="ion-happy")
+        section.skill#skill
+            .container.text-center
+                h2 Habilidades
+                hr(width="10%" align="center")
+                p Estas son las herramientas que utilizo para realizar mis páginas web.
+                .row.circle-group
+                    .col-md-3.col-sm-3.col-xs-12
+                        .circle.1
+                            i.i.ion-social-html5(aria-hidden="true")
+                            span 85%
+                    .col-md-3.col-sm-3.col-xs-12
+                        .circle.2
+                            i.ion-social-css3(aria-hidden="true")
+                            span 82%
+                    .col-md-3.col-sm-3.col-xs-12
+                        .circle.3
+                            img(src="image/jade.png", alt="icon-jade")
+                            p 84%
+                    .col-md-3.col-sm-3.col-xs-12
+                        .circle.4
+                            i.ion-social-sass(aria-hidden="true")
+                            span 82%
+                .row.circle-group
+                    .col-md-3.col-sm-3.col-xs-12
+                        .circle.5
+                            img(src="image/bootstrap-icon.png")
+                            p 90%
+                    .col-md-3.col-sm-3.col-xs-12
+                        .circle.6
+                            i.ion-social-javascript(aria-hidden="true")
+                            span 45%
+                    .col-md-3.col-sm-3.col-xs-12
+                        .circle.6
+                            img(src="image/jquery.png")
+                            p 45%
+                    .col-md-3.col-sm-3.col-xs-12
+                        .circle.7
+                            i.ion-social-wordpress(aria-hidden="true")
+                            span 80%
+
+    
+        section.portfolio#proyecto
+            .container.text-center
+                h2 Proyectos
+                hr(width="10%" align="center")
+                p Estos son algunos de los trabajos que he desarrollado a lo largo de Laboratoria.
+                ul.nav.nav-tabs
+                  li.active
+                    a(data-toggle="tab" href="#home") Todos
+                  li
+                    a(data-toggle="tab" href="#menu1") HTML - CSS
+                  li 
+                    a(data-toggle="tab" href="#menu2") Jade - Sass
+                  li 
+                    a(data-toggle="tab" href="#menu3") JS - Jquery
+
+                .tab-content
+                  #home.tab-pane.fade.in.active
+                    .row.box.text-center
+                        +col("http://rpsolange.github.io/Flat-theme","image/flat.png", "Flat Theme")
+                        +col("http://rpsolange.github.io/Dashgum-theme","image/dash.png", "Dashgum Theme")
+                        +col("http://rpsolange.github.io/Blog","image/blog.png", "Blog")
+                        +col("http://rpsolange.github.io/Kane-Theme","image/kane.png", "Kane Theme ")
+                        +col("http://agencytheme.bitballoon.com","image/agency.png", "Agency ")
+                        +col("http://loveblog.bitballoon.com","image/love.png", "Love Blog")
+                        +col("http://todo-app.bitballoon.com","image/todo.png", "TODO APP")
+                        +col("http://tic-tactoe.bitballoon.com","image/tictac.png", "Tic Tac Toe")
+                        +col("http://relojapp.bitballoon.com","image/reloj.png", "Reloj Digital")
+                  #menu1.tab-pane.fade
+                    .row.box.text-center
+                        +col("http://rpsolange.github.io/Flat-theme","image/flat.png", "Flat Theme")
+                        +col("http://rpsolange.github.io/Dashgum-theme","image/dash.png", "Dashgum Theme")
+                        +col("http://rpsolange.github.io/Blog","image/blog.png", "Blog")
+                  #menu2.tab-pane.fade
+                    .row.box.text-center
+                        +col("http://rpsolange.github.io/Kane-Theme","image/kane.png", "Kane Theme ")
+                        +col("http://agencytheme.bitballoon.com","image/agency.png", "Agency ")
+                        +col("http://loveblog.bitballoon.com","image/love.png", "Love Blog")
+                    
+                  #menu3.tab-pane.fade
+                    .row.box.text-center
+                        +col("http://todo-app.bitballoon.com","image/todo.png", "TODO APP")
+                        +col("http://tic-tactoe.bitballoon.com","image/tictac.png", "Tic Tac Toe")
+                        +col("http://relojapp.bitballoon.com","image/reloj.png", "Reloj Digital")
+
+                span ¿Quiéres ver más? Pues sígueme en mi cuenta de 
+                    a.enlace(href="https://github.com/rpsolange") GitHub .
+
+        section.contact#contact
+            .container.text-center
+                h2 Contáctame
+                hr(width="10%" align="center")
+                p Puedes contactarte conmigo a través de mis redes sociales.
+                a(href="https://www.facebook.com/robles.milu")
+                    i.ion-social-facebook
+                a(href="https://www.linkedin.com/in/mil%C3%BA-robles-prudencio-102396120?trk=nav_responsive_tab_profile_pic")
+                    i.ion-social-linkedin
+                a(href="https://plus.google.com/u/0/100512368553842772393")
+                    i.ion-social-googleplus
+                .row
+                    .col-md-6.contact-box
+                        i.ion-ios-telephone
+                        p 994869509
+                    .col-md-6.contact-box
+                        i.ion-android-mail
+                        p miilurobles@gmail.com
+
+        footer
+            .container.text-center
+                p All Rights Reserved &copy; by Milú Robles
+
+        script(src="js/jquery.js")
+        script(src="js/circle-progress.js")
+        script(src="js/bootstrap.min.js")
+        script(src="js/menu-scroll.js")
+        script(src="js/wow.min.js")
+        script(src="js/jquery.smoove.js")
+        script(src="js/smoth-scroll.js")
+        script(src="js/main.js")

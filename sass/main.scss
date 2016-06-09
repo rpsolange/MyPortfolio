@@ -1,0 +1,409 @@
+@import "../sass/_variable";
+@import "../sass/_mixin";
+
+header{
+	.navbar-default{
+		background-color: transparent;
+		padding: 0.5% 5%;
+		border: none;
+		animation-delay: 2.5s;
+		.navbar-toggle{
+			border-radius: 0;
+			border: 2px solid $white;
+			margin-top: 3%;
+			&:hover{
+				background-color: transparent;
+				.line-bar{
+					width: 100%; 
+				}
+			}
+			&:focus{
+				background-color: transparent;
+			}
+			.icon-bar{
+				background-color: $white;
+				height: 3px;
+				@include translate(all 0.5s);
+			}
+			.line-bar{
+				width: 70%; 
+			}
+		}
+		.navbar-brand{
+			width: 150px;
+			height: 80px;
+			display: block;
+			padding: 1%;
+			img{
+				width: 100%;
+				height: 70px;
+			}
+		}
+		.navbar-nav{
+			margin-top: 1%;
+			a{
+				color: $white;
+				font-family: $font1;
+				font-weight: bold;
+				display: inline-block;
+				border-bottom: 5px solid $blue-dark;
+				margin: 0 8px;
+				display: block;
+				@include translate(all 1s ease);
+				&:hover, &:focus{
+					background-color: rgba(242, 240, 216, 0.62);
+					color: $blue-dark;
+				}
+			}
+		}
+	}
+}
+#menu.active{
+	background-color: $blue-dark;
+	.navbar-nav{
+		a{
+			border-bottom: none;
+		}
+	}
+}
+
+.hero-image{
+	background-image: url("../image/image1.jpg");
+	background-repeat: repeat-x;
+	background-position: 0 20%; 
+	background-size: cover;
+	height: 100vh;
+	.marca_agua{
+		background-color: rgba(73, 95, 140, 0.34);
+		background-size: cover;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		.border-white{
+			animation-delay: 0.8s;
+			animation-duration: 2s;
+			border: 10px solid $white;
+			padding: 20% 8%;
+			.name,.line{
+				width: 100%;
+				margin: 0.8%;
+			}
+			.name{
+				animation-delay: 1.2s;
+			}
+			.line{
+				animation-delay: 1.8s;
+			}
+		}
+	}
+}
+
+.about_me{
+	color: $blue-dark;
+	padding: 4% 0;
+	background-image: url("../image/fondo.jpg");
+	.about-title{
+		margin-top: 25%;
+		.line{
+			transform: rotate(90deg);
+			border: 5px solid $blue-dark;
+			position: absolute;
+		    left: 52%;
+		    top: 70%;
+		}
+		h2{
+			font-family: $font2;
+			font-size: 3em;
+			font-weight: bold;
+		}
+		hr{
+			border: 2px solid $blue-dark;
+		}
+		.figure1{
+			overflow: hidden;
+			transform: rotate(120deg);
+			height: 370px;
+			width: 180px;
+			visibility: hidden;
+			position: absolute;
+		    z-index: 100;
+		    left: 78%;
+		    bottom: 63%
+		}
+		.figure3, .figure2{
+			height: 100%;
+			width: 100%;
+		}
+		.figure2{
+			overflow: hidden;
+			transform: rotate(-60deg);
+		}
+		.figure3{
+			visibility: visible;
+			transform: rotate(-60deg);
+			background-position: bottom center;
+			background-repeat: no-repeat;
+			background-image: url("../image/miFoto.jpg");
+		}
+	}
+	.about-text{
+		font-family: $font1;
+		padding: 8% 4% 0 12%;
+		h4{
+			font-weight: bold;
+		}
+		p{
+			font-size: 1.2em;
+			text-align: justify;
+			line-height: 30px;
+			margin: 4% 0;
+		}
+		.interes{
+			font-family: $font2;
+			font-size: 1.5em;
+		}
+		.box_icon{
+			display: inline-block;
+			text-align: center;
+			width: 140px;
+			padding: 0 2%;
+			&:hover{
+				p{
+					color: $blue-dark;
+					transition: all 1s ease-in;
+				}
+			}
+			i{
+				font-size: 3.5em;
+			}
+			p{
+				font-size: 0.8em;
+				color: transparent;
+				text-align: center;
+			}
+		}
+	}	
+}
+
+.skill{
+	background-color: $white;
+	padding: 6% 0 4%;
+	font-family: $font1;
+	h2{
+		font-family: $font2;
+		font-size: 3em;
+		color: $blue;
+		font-weight: bold;
+	}
+	hr{
+		border: 2px solid $blue;
+	}
+	p{
+		font-size: 1.2em;
+		margin: 4% 0;
+	}
+	.circle-group{
+		padding-bottom: 6%;
+		.circle {
+		    position: relative;
+		    display: inline-block;
+		    margin: 3%;
+		    vertical-align: top;
+		    text-align: center;
+		    width: 162px;
+		    padding-top: 40px;
+		    color: #2A3159;
+		    canvas {
+			    display: block;
+			    position: absolute;
+			    left: 0;
+			    top: 0;
+			}
+			img{
+				margin-top: 10%;
+			}
+			i{
+				font-size: 3em;
+				display: block;
+			}
+			span{
+				font-size: 1.2em;
+			}
+		}
+	}
+}
+
+.portfolio{
+	@extend .skill;
+	.enlace{
+		color: $blue-dark;
+		font-weight: bolder;
+		&:hover{
+			color: $blue;
+			text-decoration: none;
+		}
+	}
+	.nav-tabs{
+		border-bottom: none;
+	}
+	.nav-tabs>li.active>a{
+		color: $white;
+		background-color: $blue-light;
+		font-weight: bolder;
+	}
+	.nav-tabs>li>a{
+		font-size: 1.2em;
+		color: $white;
+		font-family: $font1;
+		background-color: $blue-dark;
+	}
+	.box{
+		padding: 5% 0;
+		.ih-item.square{
+			border: none;
+			height: auto;
+			margin: 2% auto;
+			img{
+				height: 175px;
+			}
+		}
+		.ih-item.square.effect6 .info {
+    		background: rgba(73, 95, 140, 0.34);
+    		h3{
+    			font-size: 1.5em;
+				color: $white;
+				font-weight: bold;
+				background: $blue;
+				font-family: $font2;
+    		}
+		}
+	}	
+}
+
+.contact{
+	background-image: url("../image/Andi.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position-y: -8%;
+	@extend .skill;
+	a{
+		font-size: 3em;
+		color: $blue-dark;
+		margin: 0 2%;
+		&:hover{
+			color: $blue;
+		}
+	}
+	.contact-box{
+		padding: 2% 4%;
+		i{
+			font-size: 1.5em;
+			border-radius: 50%;
+			border: 2px solid $blue-light;
+			width: 45px;
+			height: 45px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: auto;
+			color: $blue-light;
+		}
+	}
+}
+
+footer{
+	background: $blue-dark;
+	color: white;
+	font-family: $font1;
+	padding: 2%;
+	p{
+		margin-bottom: 0;
+	}
+}
+/*
+animation: animatedBackground 20s linear infinite;
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 600px 0; }
+}*/
+
+@media (max-width: 992px){
+	.about_me{
+		.about-title{
+			.line{
+				display: none;
+			}
+			.figure1{
+			    left: 40%;
+			    bottom: 0;
+			}
+		}
+	}
+	.hero-image{
+		.marca_agua{
+			.border-white{
+				padding: 5%;
+			}
+		}
+	}
+}
+@media (max-width: 1200px){
+	.about_me{
+		.about-title{
+			.line{
+			    left: 56%;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px){
+	
+	header{
+		.navbar-default{
+			.navbar-nav{
+				background-color: $blue;
+				a{
+					border-bottom: none;
+					margin: 1%;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 770px){
+	.skill{
+		.circle-group{
+			.circle{
+				margin: 4.5%;
+			}
+		}
+	}
+
+	.about_me{
+		.about-title{
+			margin-top: 10%;
+			padding-left: 8%;
+			.figure1{
+			    display: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px){
+	.skill{
+		.circle-group{
+			.circle{
+				margin: 7%;
+			}
+		}
+	}
+	.hero-image{
+		height: 70vh;
+		.marca_agua{
+			height: 70vh;
+		}
+	}
+}

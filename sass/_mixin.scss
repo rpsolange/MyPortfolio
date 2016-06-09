@@ -1,0 +1,6 @@
+@mixin translate($propiedad...){
+	-webkit-transition: $propiedad;
+    -moz-transition: $propiedad;
+    -o-transition: $propiedad;
+    transition: $propiedad;
+}
