@@ -197,7 +197,7 @@ header .navbar-default .navbar-nav a:hover, header .navbar-default .navbar-nav a
 .about_me .about-text .box_icon {
   display: inline-block;
   text-align: center;
-  width: 140px;
+  width: 150px;
   padding: 0 2%;
 }
 
@@ -294,7 +294,6 @@ header .navbar-default .navbar-nav a:hover, header .navbar-default .navbar-nav a
 }
 
 .portfolio .nav-tabs > li > a {
-  font-size: 1.2em;
   color: #F2F0D8;
   font-family: "Raleway", sans-serif;
   background-color: #2A3159;
@@ -308,6 +307,7 @@ header .navbar-default .navbar-nav a:hover, header .navbar-default .navbar-nav a
   border: none;
   height: auto;
   margin: 2% auto;
+  width: 100%;
 }
 
 .portfolio .box .ih-item.square img {
@@ -379,6 +379,9 @@ animation: animatedBackground 20s linear infinite;
 	to { background-position: 600px 0; }
 }*/
 @media (max-width: 992px) {
+  .about_me .about-text {
+    padding: 8% 8% 0;
+  }
   .about_me .about-title .line {
     display: none;
   }
@@ -387,6 +390,7 @@ animation: animatedBackground 20s linear infinite;
     bottom: 0;
   }
   .hero-image .marca_agua .border-white {
+    margin-top: 5%;
     padding: 5%;
   }
 }
@@ -411,6 +415,9 @@ animation: animatedBackground 20s linear infinite;
   .skill .circle-group .circle, .portfolio .circle-group .circle, .contact .circle-group .circle {
     margin: 4.5%;
   }
+  .about_me .about-text {
+    padding: 8% 10% 0;
+  }
   .about_me .about-title {
     margin-top: 10%;
     padding-left: 8%;
@@ -421,6 +428,9 @@ animation: animatedBackground 20s linear infinite;
 }
 
 @media (max-width: 480px) {
+  .nav > li {
+    margin: 1% 0;
+  }
   .skill .circle-group .circle, .portfolio .circle-group .circle, .contact .circle-group .circle {
     margin: 7%;
   }
