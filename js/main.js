@@ -62,7 +62,7 @@ $(window).scroll(function () {
         $('.4').circleProgress('value', 0.88);
         $('.5').circleProgress('value', 0.95);
         $('.6').circleProgress('value', 0.5);
-        $('.7').circleProgress('value', 0.8);
+        $('.7').circleProgress('value', 0.6);
         }
     }
 });
